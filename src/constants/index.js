@@ -28,7 +28,8 @@ import {
   nestjs,
   airbnbIcon,
   quiz,
-  quizapp
+  quizapp,
+  fitgym
 } from "../assets";
 
 export const navLinks = [
@@ -264,6 +265,25 @@ const projects = [
     image: quizapp,
     source_code_link: "https://github.com/vanmanh23/quiz-app",
     link: "https://github.com/vanmanh23/quiz-app",
+  },
+
+  {
+    name: "SoFit Gym",
+    description:
+      "SoFit Gym is a user-friendly web application for exploring gym facilities, schedules, and fitness classes. Easily browse and book workout sessions with a sleek and modern interface.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: fitgym,
+    source_code_link: "https://github.com/vanmanh23/anime-movie",
+    link: "https://anime-movie-jet.vercel.app/",
   },
 ];
 

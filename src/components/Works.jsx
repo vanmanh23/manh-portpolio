@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -7,6 +7,8 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Link } from "react-router-dom";
+import { exp } from "three/webgpu";
 
 const ProjectCard = ({
   index,
@@ -67,31 +69,55 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+export default function Works ({isopen}) {
+  const [isShowAll, setIsShowAll] = React.useState(3);
+  useEffect(() => {
+    if(!isopen) {
+    setIsShowAll(3);
+  }else if(isopen) {
+    setIsShowAll(projects.length);
+  }
+  projects.slice(0, 3).map((project, index) => (
+    console.log(project)
+  ));
+  }, [isShowAll]);
+  
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+    <div className='flex flex-col justify-between w-full items-center '>
+      <motion.div variants={textVariant()} className="w-full flex justify-start">
+        {!isopen && <p className={`${styles.sectionSubText}`}>Highligh Projects</p>}
+        {isopen && <h2 className={`${styles.sectionHeadText}`} style={{fontSize:"25px", paddingTop: "20px"}}>Projects List.</h2>}
       </motion.div>
 
-      <div className='w-full flex'>
+      <div className='w-full flex justify-end'>
+        { !isopen ?
+        <Link to="/all-projects" >
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          View all Projects →
         </motion.p>
+        </Link>
+        :
+        <Link to="/" >
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          style={{fontSize:"15px", alignItems:"center"}}
+        >
+          Back →
+        </motion.p>
+        </Link>
+        }
       </div>
+    </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <a href={project.link} key={`project-${index}`} target="_blank">
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
+      <div className='mt-8 flex flex-wrap gap-7'>
+        {projects.slice(0, isShowAll).map((project, index) => (
+          <a href={project.link} key={index} target="_blank">
+            <ProjectCard index={index} {...project} />
           </a>
         ))}
       </div>
@@ -99,4 +125,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+// export default SectionWrapper(Works, "");

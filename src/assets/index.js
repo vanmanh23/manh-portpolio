@@ -34,7 +34,8 @@ import airbnb from "./airbnb.png";
 import animemovie from "./animemovie.png";
 import nextjs from "./tech/nextjs.png";
 import nestjs from "./tech/nestjs.png";
-import quizapp from "./quizapp.png"
+import quizapp from "./quizapp.png";
+import fitgym from "./tech/fitgym.png";
 
 export {
   quiz,
@@ -70,5 +71,6 @@ export {
   animemovie,
   nextjs,
   nestjs,
-  quizapp
+  quizapp,
+  fitgym
 };
