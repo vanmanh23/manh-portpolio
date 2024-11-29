@@ -14,11 +14,12 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        <Experience />
-        <Tech />
         <div className={`${styles.padding} max-w-7xl mx-auto relative z-0`}>
           <Works isopen={false}/>
         </div>
+        <Experience />
+        <Tech />
+        
         <div className='relative z-0'>
           <Contact />
           <StarsCanvas />
