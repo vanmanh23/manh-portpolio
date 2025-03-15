@@ -36,6 +36,7 @@ import nextjs from "./tech/nextjs.png";
 import nestjs from "./tech/nestjs.png";
 import quizapp from "./quizapp.png";
 import fitgym from "./tech/fitgym.png";
+import blogpage from "./blogpage.png";
 
 export {
   quiz,
@@ -72,5 +73,6 @@ export {
   nextjs,
   nestjs,
   quizapp,
-  fitgym
+  fitgym,
+  blogpage
 };

@@ -29,7 +29,8 @@ import {
   airbnbIcon,
   quiz,
   quizapp,
-  fitgym
+  fitgym,
+  blogpage
 } from "../assets";
 
 export const navLinks = [
@@ -221,6 +222,32 @@ const projects = [
     image: airbnb,
     source_code_link: "https://github.com/vanmanh23/airbnbapp",
     link: "https://airbnbapp-web.vercel.app/",
+  },
+  {
+    name: "Blog page",
+    description:
+      "BlogPage is a modern blog website that allows users to read and share articles with a minimalist interface, supporting search and comments. The website is SEO optimized, displays well on all devices.",
+    tags: [
+      {
+        name: "VueJS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "NestJS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: blogpage,
+    source_code_link: "https://github.com/vanmanh23/blog-page",
+    link: "https://blog-page-ashy-two.vercel.app/",
   },
   {
     name: "Anime Movie",
