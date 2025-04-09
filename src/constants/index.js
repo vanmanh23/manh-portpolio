@@ -30,7 +30,8 @@ import {
   quiz,
   quizapp,
   fitgym,
-  blogpage
+  blogpage,
+  techshop
 } from "../assets";
 
 export const navLinks = [
@@ -197,6 +198,28 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "TechShop",
+    description:
+      "Here you can find phones, laptops, accessories and many other technology products. We have a large collection of products that you can buy and sell. You can also make an offer.",
+    tags: [
+      {
+        name: "NextJs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: techshop,
+    source_code_link: "https://github.com/vanmanh23/tech-shop",
+    link: "https://tech-shop-five-hazel.vercel.app",
+  },
   {
     name: "Airbnb Clone",
     description:
