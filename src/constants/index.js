@@ -31,7 +31,9 @@ import {
   quizapp,
   fitgym,
   blogpage,
-  techshop
+  techshop,
+  ecommerce_app,
+  springboot
 } from "../assets";
 
 export const navLinks = [
@@ -92,6 +94,10 @@ const technologies = [
   {
     name: "Nest.JS",
     icon: nestjs,
+  },
+  {
+    name: "Spring Boot",
+    icon: springboot,
   },
   {
     name: "Tailwind CSS",
@@ -198,6 +204,28 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Ecommerce App",
+    description:
+      "Discover phones, laptops, accessories, and a variety of tech items. Our platform offers a wide range of products for buying and selling. You can also place your own offers. You can also view your offers.",
+    tags: [
+      {
+        name: "Spring Boot",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MySql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Docker",
+        color: "blue-text-gradient",
+      }
+    ],
+    image: ecommerce_app,
+    source_code_link: "https://github.com/vanmanh23/ecommerce_springboot",
+    link: "https://github.com/vanmanh23/ecommerce_springboot",
+  },
   {
     name: "TechShop",
     description:

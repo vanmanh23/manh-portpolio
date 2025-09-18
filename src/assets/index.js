@@ -20,6 +20,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import springboot from "./tech/springboot.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -38,6 +39,7 @@ import quizapp from "./quizapp.png";
 import fitgym from "./tech/fitgym.png";
 import blogpage from "./blogpage.png";
 import techshop from './techshop.png';
+import ecommerce_app from './ecommerce_app.png';
 
 export {
   quiz,
@@ -76,5 +78,7 @@ export {
   quizapp,
   fitgym,
   blogpage,
-  techshop
+  techshop,
+  ecommerce_app,
+  springboot
 };
